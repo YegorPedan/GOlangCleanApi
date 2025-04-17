@@ -4,7 +4,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"net/http"
 
-	eventHttp "github.com/YegorPedan/GOlangCleanApi/internal/event/dilevery/http"
+	eventHttp "github.com/YegorPedan/GOlangCleanApi/internal/event/delivery/http"
 )
 
 func (s *Server) MapHandlers(e *echo.Echo) error {
