@@ -33,6 +33,10 @@ func (s *Server) Run() error {
 		}
 	}()
 
+	if err := s.MapHandlers(s.app); err != nil {
+		log.Fatalf("An error has occured maping the handlers: %v", err)
+	}
+
 	// Handle graceful shutdown
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt, syscall.SIGTERM)
